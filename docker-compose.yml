@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+    node:
+        build:
+            context: ./react-image-compressor
+    nginx:
+        restart: always
+        build:
+            context: ./nginx
+        ports:
+            - "8080:80"
